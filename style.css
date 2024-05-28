@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    background-color: slateblue;
+}
+.nav__container{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    height: 70px;
+    justify-content: space-around;
+    align-items: center;
+     max-width: 1200px;
+    color: white;
+}
+
+.nav__links{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    list-style-type: none;
+}
+.nav__vinculos{
+    text-decoration: none;
+    color: white;
+}
+/* vamos a empézar por firts movie  */
+.hero{
+    max-width: 1200px;
+    width: 90%;
+    display: flex;
+    /* como vamos a trabajar primero en movil quiero que tenga un estilo en columna */
+    flex-direction: column;
+    margin: 0 auto;
+    /* padin ariibsa y abajo */
+    padding: 60px 0;
+    /* gap de 2em entre elementos */
+    gap: 2em;
+
+}
+.hero *{
+    outline: 1px solid red;
+}
+.hero__img{
+    width: 100%;
+    display: block;
+    /* la imagen siempre medira siempre el 100% pero no pasara de los 400px */
+    max-width: 400px;
+    /* para centrarla con margen */
+    margin: 0 auto;
+}
+.hero__text{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+}
+.hero__title{
+    font-size:2.5rem;
+}
+.hero__cta{
+    background-color: slateblue;
+    color: white;
+    text-decoration: none;
+    padding:1em 3em;
+    border-radius: 2em;
+    align-self: center;
+}
+/* para dispositivos desktop */
+@media (min-width:768px){
+    .hero{
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+    }
+    .hero__picture{
+        order: 1;
+        width: 50%;
+    }
+    hero__img{
+        max-width: none;
+
+    }
+    hero__text{
+        width: 45%;
+    }
+}
